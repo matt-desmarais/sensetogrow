@@ -31,4 +31,4 @@ while True:
     data = {"Sensors":[{"soil1" : round(get_moisture_scale(analog_in1),1),}, {"soil2" : round(get_moisture_scale(analog_in2),1),}, {"soil3" : round(get_moisture_scale(analog_in2),1),}, {"soil4" : round(get_moisture_scale(analog_in3),1),}, {"humidity" : temphumiditysensor.relative_humidity,}, {"temperature" : (temphumiditysensor.temperature  * 9 / 5 + 32),},  {"infraredlight" : lightsensor.infrared,}, {"visiblelight" : lightsensor.visible,}, {"fullspectrum" : lightsensor.full_spectrum,}, {"lux" : lightsensor.lux,}]}
     jsondata = json.dumps(data)
     print(jsondata)
-    time.sleep(1)
+    time.sleep(.1)
